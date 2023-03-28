@@ -10,7 +10,7 @@ This technique is suitable when you need to interface with OS features on severa
 The solution is based on static polymorphism and largely inspired by the strategy/policy pattern:
 Everything starts with the _App_ trait, which is implemented for every operating system.
 It specifies the required functions which each OS-scope must implement.
-The OS-specific code is chosen as compile-time, and is chosed according to which OS it is built on.
+The OS-specific code is chosen as compile-time according to which OS it's built on.
 
 Then we have the actual logic of the application, which only concerns itself with calling methods (per the trait).
 In other words: The application logic isn't even aware which OS it's operating on.
